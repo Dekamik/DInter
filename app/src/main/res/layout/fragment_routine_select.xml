@@ -4,24 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    tools:context=".RoutineSelectFragment">
 
     <TextView
-        android:id="@+id/textview_second"
+        android:id="@+id/textview_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
+        android:text="@string/select_routine"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/routines_spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_second"
+    <Spinner
+        android:id="@+id/routines_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/previous"
+        android:entries="@array/routines"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@id/button_begin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+
+    <Button
+        android:id="@+id/button_begin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/begin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
+        app:layout_constraintTop_toBottomOf="@id/routines_spinner" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

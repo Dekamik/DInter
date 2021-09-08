@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.dennisvonbargen.dinter.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:name="com.dennisvonbargen.dinter.RoutineSelectFragment"
+        android:label="@string/routine_select_fragment_label"
+        tools:layout="@layout/fragment_routine_select">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_RoutineSelectFragment_to_IntervalTimerFragment"
             app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.dennisvonbargen.dinter.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:name="com.dennisvonbargen.dinter.IntervalTimerFragment"
+        android:label="@string/interval_timer_fragment_label"
+        tools:layout="@layout/fragment_interval_timer">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_IntervalTimerFragment_to_RoutineSelectFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
